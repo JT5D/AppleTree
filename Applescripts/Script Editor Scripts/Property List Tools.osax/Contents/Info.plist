@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Property List Tools</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0.7, Copyright 2004-2010 Late Night Software Ltd.  All Rights Reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.latenightsw.plisttools</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>osax</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.7</string>
+	<key>CFBundleSignature</key>
+	<string>ascr</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.7</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+	<key>NSAppleScriptEnabled</key>
+	<true/>
+	<key>OSAScriptingDefinition</key>
+	<string>osax.sdef</string>
+	<key>OSAXHandlers</key>
+	<dict>
+		<key>Events</key>
+		<dict>
+			<key>ScTlplsL</key>
+			<dict>
+				<key>Context</key>
+				<string>User</string>
+				<key>Handler</key>
+				<string>LoadPList</string>
+				<key>ThreadSafe</key>
+				<true/>
+			</dict>
+			<key>ScTlplsS</key>
+			<dict>
+				<key>Context</key>
+				<string>User</string>
+				<key>Handler</key>
+				<string>StorePList</string>
+				<key>ThreadSafe</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

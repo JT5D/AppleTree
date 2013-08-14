@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Add this to favorites</string>
+	<key>semanticCategory</key>
+	<string>finderAddToFavorites</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Adding your selection to the favorites folder.</string>
+	<key>alternativeFeedback</key>
+	<string>...adding your selection to the favorites folder</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>17</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

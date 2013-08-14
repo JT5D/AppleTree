@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>104</integer>
+	<key>semanticCategory</key>
+	<string>globalWhatTimeIsIt</string>
+	<key>alternativeSpokenFeedback</key>
+	<string></string>
+	<key>suppressSpokenConfirmation</key>
+	<string>yes</string>
+	<key>alternativeFeedback</key>
+	<string></string>
+	<key>DefaultCommandName</key>
+	<string>What time is it?</string>
+</dict>
+</plist>

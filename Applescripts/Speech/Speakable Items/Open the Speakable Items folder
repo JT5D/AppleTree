@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>109</integer>
+	<key>semanticCategory</key>
+	<string>globalOpenSpeakableItemsFolder</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Opening the speakable items folder.</string>
+	<key>alternativeFeedback</key>
+	<string>...opening the speakable items folder</string>
+	<key>DefaultCommandName</key>
+	<string>Open Speakable Items folder</string>
+</dict>
+</plist>

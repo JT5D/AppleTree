@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>107</integer>
+	<key>semanticCategory</key>
+	<string>globalListenContinuously</string>
+	<key>alternativeSpokenFeedback</key>
+	<!--  this is not quite right since the user might have set keyword off or optional -->
+	<!--  and it is a bit wordy to specify everything -->
+	<string>Use keyword before speaking.</string>
+	<key>alternativeFeedback</key>
+	<string>...turning push-to-talk off</string>
+	<key>DefaultCommandName</key>
+	<string>Listen continuously</string>
+</dict>
+</plist>

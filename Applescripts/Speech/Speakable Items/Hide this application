@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Hide this application</string>
+	<key>semanticCategory</key>
+	<string>globalHideThisApplication</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Hiding front application.</string>
+	<key>alternativeFeedback</key>
+	<string>...hiding front application</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>4</integer>
+		</dict>
+	</array>
+</dict>
+</plist> 

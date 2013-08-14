@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>down</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<false/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>125</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<false/>
+	<key>category</key>
+	<string>SCRIPTS</string>
+	<key>command</key>
+	<string># Note: You may need to input your ROOT password just once when using this extension.
+# To reset your ROOT password just run `xampp root`
+
+# start Start XAMPP (Apache, MySQL and eventually others)
+# startapache Start only Apache
+# startmysql Start only MySQL
+# startftp Start only ProFTPD
+
+# stop Stop XAMPP (Apache, MySQL and eventually others)
+# stopapache Stop only Apache
+# stopmysql Stop only MySQL
+# stopftp Stop only ProFTPD
+
+# reload Reload XAMPP (Apache, MySQL and eventually others)
+# reloadapache Reload only Apache
+# reloadmysql Reload only MySQL
+# reloadftp Reload only ProFTPD
+
+# restart Stop and start XAMPP
+# security Check XAMPP's security
+
+# enablessl Enable SSL support for Apache
+# disablessl Disable SSL support for Apache
+
+# backup Make backup file of your XAMPP config, log and data files
+
+# fix_rights Resets file permissions.
+INPUT=`echo "{query}" | tr A-Z a-z`
+
+PASS=$(Authenticate.app/Contents/MacOS/Authenticate -get password)
+if [ $PASS = '' ] || [ $INPUT = 'root' ]
+then
+	Authenticate.app/Contents/MacOS/Authenticate
+else
+	PASS =$(Authenticate.app/Contents/MacOS/Authenticate -get password)
+	echo "Load Admin password successfully!"
+	echo $PASS | sudo -S sh -c "/Applications/XAMPP/xamppfiles/xampp {query}"
+fi</string>
+	<key>disabled</key>
+	<false/>
+	<key>escapedollar</key>
+	<false/>
+	<key>escapequery</key>
+	<true/>
+	<key>escapequerybackquotes</key>
+	<true/>
+	<key>escapequerybrackets</key>
+	<true/>
+	<key>escapequeryquotes</key>
+	<true/>
+	<key>escapequerysemicolons</key>
+	<true/>
+	<key>growloutput</key>
+	<true/>
+	<key>growloutputsticky</key>
+	<false/>
+	<key>keyword</key>
+	<string>xampp</string>
+	<key>logging</key>
+	<false/>
+	<key>multifileargs</key>
+	<false/>
+	<key>parameter</key>
+	<integer>3</integer>
+	<key>silent</key>
+	<true/>
+	<key>subtitle</key>
+	<string>Start/Stop Apache &amp; MySQL &amp; FTP of XAMPP in Alfred.</string>
+	<key>title</key>
+	<string>XAMPP-Control</string>
+</dict>
+</plist>

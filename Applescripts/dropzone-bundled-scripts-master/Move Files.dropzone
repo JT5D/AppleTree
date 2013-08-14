@@ -1,0 +1,35 @@
+#!/usr/bin/ruby
+
+# Dropzone Destination Info
+# Name: Move Files
+# Description: Allows you to move dropped files to a specified folder. Hold down option while dragging to copy.
+# Handles: NSFilenamesPboardType
+# Creator: Aptonic Software
+# URL: http://aptonic.com
+# OptionsNIB: ChooseFolder
+
+def dragged
+  $dz.determinate(true)
+  
+  move = true
+  
+  if ENV['OPERATION'] == "NSDragOperationCopy"
+    operation = "Copying"
+    move = false
+  else
+    operation = "Moving"
+  end
+  
+  $dz.begin("#{operation} files...")
+
+  Rsync.do_copy($items, ENV['EXTRA_PATH'], move)
+  
+  finish_op = (move ? "Move" : "Copy")
+  $dz.finish("#{finish_op} Complete")
+  $dz.url(false)
+end
+
+def clicked
+  escaped_path = ENV['EXTRA_PATH'].gsub(/["`$\\]/){ |s| '\\' + s }
+  system("open \"#{escaped_path}\"")
+end

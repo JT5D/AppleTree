@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Close this window</string>
+	<key>semanticCategory</key>
+	<string>globalCloseWindow</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Closing window.</string>
+	<key>alternativeFeedback</key>
+	<string>...closing</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>13</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

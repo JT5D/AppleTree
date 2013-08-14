@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Mark as unread</string>
+	<key>semanticCategory</key>
+	<string>mailMarkAsRead</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Marking message unread</string>
+	<key>alternativeFeedback</key>
+	<string>...marking message unread</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<true/>
+			<key>VirtualKeyCode</key>
+			<integer>32</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

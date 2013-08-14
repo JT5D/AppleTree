@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Open address book</string>
+	<key>semanticCategory</key>
+	<string>mailOpenAddressBook</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Opening adddress book.</string>
+	<key>alternativeFeedback</key>
+	<string>...opening address book</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<true/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

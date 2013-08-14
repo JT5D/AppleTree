@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Reply to all</string>
+	<key>semanticCategory</key>
+	<string>mailReplyToAll</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Replying to all.</string>
+	<key>alternativeFeedback</key>
+	<string>...replying to all</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<true/>
+			<key>VirtualKeyCode</key>
+			<integer>15</integer>
+		</dict>
+	</array>
+</dict>
+</plist> 

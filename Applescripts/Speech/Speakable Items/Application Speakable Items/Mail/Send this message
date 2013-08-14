@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Send this message</string>
+	<key>semanticCategory</key>
+	<string>mailSendMessage</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Sending message.</string>
+	<key>alternativeFeedback</key>
+	<string>...sending message</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<true/>
+			<key>VirtualKeyCode</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+</dict>
+</plist> 

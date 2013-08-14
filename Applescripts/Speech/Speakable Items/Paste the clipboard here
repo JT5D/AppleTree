@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Past the clipboard here</string>
+	<key>semanticCategory</key>
+	<string>globalPasteClipboardHere</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Pasting the clipboard.</string>
+	<key>alternativeFeedback</key>
+	<string>...pasting the clipboard</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>9</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

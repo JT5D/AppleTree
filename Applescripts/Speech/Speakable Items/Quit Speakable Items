@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>111</integer>
+	<key>alternativeSpokenFeedback</key>
+	<string>Quitting from speakable items</string>
+	<key>alternativeFeedback</key>
+	<string>...quitting speakable items</string>
+	<key>DefaultCommandName</key>
+	<string>Quit speakable items</string>
+</dict>
+</plist>

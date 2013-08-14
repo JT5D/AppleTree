@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>118</integer>
+	<key>semanticCategory</key>
+	<string>globalMakeKeyboardCommand</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Pick a command key combination and name it.</string>
+	<key>alternativeFeedback</key>
+	<string>...pick a command key combination and name it</string>
+	<key>DefaultCommandName</key>
+	<string>Define a keyboard command</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>116</integer>
+	<key>semanticCategory</key>
+	<string>globalOpenSpeechFeedbackWindow</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>[[emph -]] opening the speech feedback [[emph -]] window.</string>
+	<key>alternativeFeedback</key>
+	<string>...opening the speech feedback window</string>
+	<key>DefaultCommandName</key>
+	<string>Open Speech Feedback window</string>
+</dict>
+</plist>

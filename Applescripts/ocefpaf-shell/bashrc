@@ -1,0 +1,126 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bash.bashrc ]; then
+        . /etc/bash.bashrc
+fi
+
+dir="$HOME/bin"
+source ${dir}/aliases
+source ${dir}/functions
+source ${dir}/auto-completes
+
+# Git aware prompt.
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export PS1='\[\033[1;37m\][\[\033[1;32m\]\u\[\033[0m\]@\h\[\033[0m\] $? \[\033[1;34m\]\w\[\033[0;35m\]$(__git_ps1 " %s")\[\033[1;37m\]]\[\033[0m\]\n> '
+
+
+#########################
+# ENVIRONMENT VARIABLES #
+#########################
+export EDITOR=/usr/bin/vim
+export PAGER="less -R"
+export LC_PAPER=en_US.UTF-8@letter
+
+# HISTORY
+export HISTCONTROL=ignorespace # not to remember a particular command using space
+export HISTCONTROL=$HISTCONTROL:erasedups # erase duplicates across the whole history
+export HISTSIZE=100000
+export HISTTIMEFORMAT='%F %T '
+# FUNCOES ZZ
+source $HOME/bin/funcoeszz
+export ZZPATH=$HOME/bin/funcoeszz
+
+# FERRET
+#source $HOME/00-NOBKP/ferret/ferret_paths
+#alias ferret='ferret -nojnl'  # no journal.
+
+# virtualenvwrapper
+export VIRTUALENV_USE_DISTRIBUTE=1 # Always use pip/distribute
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/bin/virtualenvwrapper_lazy.sh
+# /usr/bin/virtualenvwrapper.sh
+
+# IFORT
+# source /opt/intel/bin/ifortvars.sh ia32
+
+# GOTM (put all this at: # source . gotm.source)
+#export GOTMDIR=~/ocean_softs/GOTM/gotm-4.0.0
+#export FORTRAN_COMPILER=GFORTRAN
+#export NETCDFHOME=/usr/local
+#export NETCDFINC=$NETCDFHOME/include
+#export NETCDFLIBNAME=$NETCDFHOME/lib/libnetcdf.a
+#export PYTHONINCDIR=/usr/include/python2.6
+#export PYTHONLIBDIR=/usr/lib
+#export PYTHONLIBNAME=python2.6
+#export NUMPYDIR=/usr/lib/python2.6/site-packages/numpy
+
+# PROXY FURG
+#export HTTP_PROXY="proxy.furg.br:3128"
+#export HTTPS_PROXY="proxy.furg.br:3128"
+#export FTP_PROXY="proxy.furg.br:3128"
+
+# PYTHON.
+export PYTHONDONTWRITEBYTECODE=1 # avoid pyc/pyo
+export PYTHONPATH=$PYTHONPATH:$HOME/bin
+alias ipy='ipython --nosep --no-confirm-exit --no-banner --pprint --color-info'
+alias ipynb='ipython notebook --pylab inline'
+alias py='python'
+alias pylab='ipython --pylab'
+alias pep8='pep8 --repeat'
+
+# Canopy.
+function epd(){
+#path=$HOME/00-NOBKP/Canopy/appdata/canopy-1.0.0.1160.rh5-x86_64/bin
+path=$HOME/Enthought/Canopy_64bit/User/bin
+export PATH=$PATH:$path
+$path/ipython --pylab=tk
+}
+
+# COLORS.
+BLACK='\e[0;30m';     GREEN='\e[0;32m';       PURPLE='\e[0;35m';
+BROWN='\e[0;33m';     LIGHTGRAY='\e[0;37m';   DARKGRAY='\e[1;30m';
+LIGHTBLUE='\e[1;34m'; LIGHTGREEN='\e[1;32m';  LIGHTCYAN='\e[1;36m';
+LIGHTRED='\e[1;31m';  LIGHTPURPLE='\e[1;35m'; YELLOW='\e[1;33m';
+WHITE='\e[1;37m';     RED='\e[1;31m';         BLUE='\e[1;34m';
+CYAN='\e[1;36m';      red='\e[0;31m';         blue='\e[0;34m';
+cyan='\e[0;36m';      NC='\e[0m' # No Color
+
+# Color man.
+export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
+export LESS_TERMCAP_me=$'\E[0m' # end mode
+export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m' # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m' # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# example: echo -e "${CYAN}This is BASH ${RED}${BASH_VERSION%.*}${CYAN} - DISPLAY on ${RED}$DISPLAY${NC}\n"
+
+# ignore hidden directory in bash completion
+bind 'set match-hidden-files off'
+
+# MATLAB.
+function mat(){
+sed "s/user/$USER/g" $HOME/Dropbox/REPOS/ocefpaf-matlab/startup.orig > \
+    $HOME/Dropbox/REPOS/ocefpaf-matlab/startup.m;
+reset; export LANG=en_US.UTF-8
+unset LANG
+matlab -nodesktop -nosplash
+reset
+export LANG=en_US.UTF-8
+}
+
+# Run a random script as welcome.
+random_script
+# Google calendar.
+# showcal
+# Greeting.
+# source ~/bin/greeting
+
+# Autoenv ("pip install autoenv").
+source /usr/bin/activate.sh

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>114</integer>
+	<key>semanticCategory</key>
+	<string>globalCloseSpeechCommandsWindow</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>[[emph -]] closing speech commands [[emph -]] window.</string>
+	<key>alternativeFeedback</key>
+	<string>...closing</string>
+	<key>DefaultCommandName</key>
+	<string>Close commands window</string>
+</dict>
+</plist>

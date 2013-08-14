@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Make a sticky note</string>
+	<key>semanticCategory</key>
+	<string>globalMakeAStickyNote</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>the selection will be made into a sticky note</string>
+	<key>alternativeFeedback</key>
+	<string>...copying selection to stickies</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<true/>
+			<key>VirtualKeyCode</key>
+			<integer>16</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

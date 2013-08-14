@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+
+# Dropzone Destination Info
+# Name: Copy Files
+# Description: Allows you to copy dropped files to a specified folder.
+# Handles: NSFilenamesPboardType
+# Creator: Aptonic Software
+# URL: http://aptonic.com
+# OptionsNIB: ChooseFolder
+
+def dragged
+  $dz.determinate(true)
+  $dz.begin("Copying files...")
+  Rsync.do_copy($items, ENV['EXTRA_PATH'], false)
+  $dz.finish("Copy Complete")
+  $dz.url(false)
+end
+
+def clicked
+  escaped_path = ENV['EXTRA_PATH'].gsub(/["`$\\]/){ |s| '\\' + s }
+  system("open \"#{escaped_path}\"")
+end

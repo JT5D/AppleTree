@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>120</integer>
+	<key>alternativeSpokenFeedback</key>
+	<string>Inserting today's date.</string>
+	<key>alternativeFeedback</key>
+	<string>...inserting today's date</string>
+	<key>DefaultCommandName</key>
+	<string>Insert today's date</string>
+</dict>
+</plist>

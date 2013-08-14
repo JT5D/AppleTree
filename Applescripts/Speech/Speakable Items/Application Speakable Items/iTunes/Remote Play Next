@@ -1,0 +1,1 @@
+property remote_IP : "eppc://IPADDRESS"property remote_iTunes : application "iTunes" of machine remote_IPtry	using terms from application "iTunes"		tell remote_iTunes			next track		end tell	end using terms fromend try

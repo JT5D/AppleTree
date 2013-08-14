@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $cd = "./CocoaDialog.app/Contents/MacOS/CocoaDialog";
+
+system($cd, @ARGV);

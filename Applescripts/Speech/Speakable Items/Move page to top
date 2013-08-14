@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Move page to top</string>
+	<key>semanticCategory</key>
+	<string>globalMovePageToTop</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Moving page to top.</string>
+	<key>alternativeFeedback</key>
+	<string>...moving page to top</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<false/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>115</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>106</integer>
+	<key>semanticCategory</key>
+	<string>globalPushToTalk</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>You must now hold the push to talk key before giving spoken commands.</string>
+	<key>alternativeFeedback</key>
+	<string>...hold the push to talk key before speaking</string>
+	<key>DefaultCommandName</key>
+	<string>Turn on push to talk</string>
+</dict>
+</plist>

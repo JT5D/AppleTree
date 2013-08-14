@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Connect to server</string>
+	<key>semanticCategory</key>
+	<string>finderConnectToServer</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Please select the server.</string>
+	<key>alternativeFeedback</key>
+	<string>...connecting to server</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>40</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,11 @@
+Sitemap Wayfinding Applescript Generator: SWAG README file
+
+This project is an AppleScript application that may be used with a sitemap.xml file and Omnigraffle Professional 5 (other versions may work, this is what I developed the script using). I am open sourcing the software in the hopes that others make additions that make it useful.
+
+Also, nikjft forked this codebase with something far more useful. I suggest you use his code, found here:
+
+https://github.com/nikjft/Omnigraffle-Sitemap-Generator/network
+
+If you are nikjft, contact me and I will get this merged so there's only one awesome source of Omnigraffle sitemapping Applescripting joy.
+
+Good luck! Contact me at jdkunesh@gmail.com with questions or suggestions.

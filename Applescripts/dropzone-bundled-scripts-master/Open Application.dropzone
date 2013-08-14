@@ -1,0 +1,20 @@
+#!/usr/bin/ruby
+
+# Dropzone Destination Info
+# Name: Open Application
+# Description: Allows you to open dropped files with a selected application. You can also launch the application by clicking on it in the grid.
+# Handles: NSFilenamesPboardType
+# Creator: Aptonic Software
+# URL: http://aptonic.com
+# OptionsNIB: ChooseApplication
+
+def dragged
+  files = ""
+  $items.each { |file| files += "\"#{file}\" "}
+  system("xattr -d com.apple.quarantine #{files} >& /dev/null")
+  system("open -a \"#{ENV['EXTRA_PATH']}\" #{files}")
+end
+
+def clicked
+  system("open \"#{ENV['EXTRA_PATH']}\"")
+end

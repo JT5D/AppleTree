@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>100</integer>
+	<key>alternativeSpokenFeedback</key>
+	<string>Quitting application.</string>
+	<key>alternativeFeedback</key>
+	<string>...quitting application</string>
+	<key>DefaultCommandName</key>
+	<string>Quit this application</string>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Show view options</string>
+	<key>semanticCategory</key>
+	<string>finderShowViewOptions</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>You may change view options with this dialog.</string>
+	<key>alternativeFeedback</key>
+	<string>...showing view options</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>38</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,92 @@
+#!/usr/bin/ruby
+ 
+# Dropzone Destination Info
+# Name: ImageShack
+# Description: Uploads an image to ImageShack. Holding down option causes the resulting URL to be minified using the Is.Gd service.
+# Handles: NSFilenamesPboardType
+# Events: Clicked, Dragged
+# KeyModifiers: Option
+# Creator: Aptonic Software
+# URL: http://aptonic.com
+# IconURL: http://aptonic.com/destinations/icons/imageshack.png
+ 
+require "rexml/document"
+
+FF_USERAGENT = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.0.6) Gecko/2009011913 Firefox/3.0.6"
+
+def dragged
+  $dz.determinate(true)
+  
+  file_path = $items[0]
+  filename = File.basename(file_path)
+  
+  allowed_exts = ["jpg", "jpeg", "gif", "tif", "tiff", "png", "bmp"]
+  ext = File.extname(file_path).downcase[1..-1]
+  
+  if not allowed_exts.include?(ext)
+    $dz.finish("Not an Image")
+    $dz.url(false)
+    Process.exit
+  end
+  
+  $dz.begin("Uploading #{filename}...")
+  
+  last_output = 0
+  is_receiving_xml = false
+  xml_output = ""
+  ext = "jpeg" if ext == "jpg"
+  ext = "tiff" if ext == "tif"
+  
+  file_path = file_path.gsub('"', '\"')
+  IO.popen("/usr/bin/curl -# -A '#{FF_USERAGENT}' -F 'xml=yes' -F \"fileupload=@#{file_path};type=image/#{ext}\" http://www.imageshack.us/upload_api.php 2>&1 | tr -u \"\r\" \"\n\"") do |f|
+    while line = f.gets do
+      if line =~ /%/ and not is_receiving_xml
+        line_split = line.split(" ")
+        file_percent_raw = line_split[1]
+        if file_percent_raw != nil
+          file_percent = file_percent_raw.to_i
+          if last_output != file_percent
+            $dz.percent(file_percent) 
+            $dz.determinate(false) if file_percent == 100
+          end
+          last_output = file_percent
+        end
+      else
+        if line =~ /xml/ or is_receiving_xml
+          is_receiving_xml = true
+          xml_output += line
+        else
+          handle_errors(line)
+        end
+      end
+    end
+  end
+
+  begin
+    url = ""
+    doc = REXML::Document.new(xml_output)
+    doc.elements.each("imginfo/links/image_link") {|e| url = e.text}
+    raise "Error getting URL" if url == nil or url == ""
+    url = IsGd.minify(url) if ENV['KEY_MODIFIERS'] == "Option"
+    $dz.finish("URL is now on clipboard")
+    $dz.url(url)
+  rescue
+    $dz.finish("Upload Failed")
+    $dz.url(false)
+  end
+  
+end
+
+def handle_errors(line)
+  if line[0..4] == "curl:"
+    if line[6..-1] =~ /Couldn't resolve/
+      $dz.error("ImageShack Upload Error", "Please check your network connection.")
+    else
+      $dz.error("ImageShack Upload Error", line[6..-1])
+    end
+  end
+end
+
+def clicked
+  system("open http://imageshack.us/")
+end

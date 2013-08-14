@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>102</integer>
+	<key>semanticCategory</key>
+	<string>globalGetMail</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Launching your mail program.</string>
+	<key>alternativeFeedback</key>
+	<string>...launching mail program</string>
+	<key>DefaultCommandName</key>
+	<string>Get my mail</string>
+</dict>
+</plist>

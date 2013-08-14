@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Cancel last command</string>
+	<key>semanticCategory</key>
+	<string>globalCancelCommand</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Cancelling last command.</string>
+	<key>suppressSpokenConfirmation</key>
+	<string></string>
+	<key>alternativeFeedback</key>
+	<string>...cancelling</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<false/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>6</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

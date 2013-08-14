@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>119</integer>
+	<key>semanticCategory</key>
+	<string>globalStartScreenSaver</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>One moment, starting screen saver.</string>
+	<key>alternativeFeedback</key>
+	<string>...starting screen saver</string>
+	<key>DefaultCommandName</key>
+	<string>Start screen saver</string>
+</dict>
+</plist>

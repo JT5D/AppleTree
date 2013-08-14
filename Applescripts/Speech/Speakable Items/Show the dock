@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>DefaultCommandName</key>
+	<string>Show the dock</string>
+	<key>semanticCategory</key>
+	<string>finderShowDock</string>
+	<key>alternativeSpokenFeedback</key>
+	<string>Showing dock.</string>
+	<key>alternativeFeedback</key>
+	<string>...showing dock</string>
+	<key>KeyPressArray</key>
+	<array>
+		<dict>
+			<key>CommandKeyDown</key>
+			<true/>
+			<key>ControlKeyDown</key>
+			<false/>
+			<key>OptionKeyDown</key>
+			<true/>
+			<key>ShiftKeyDown</key>
+			<false/>
+			<key>VirtualKeyCode</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

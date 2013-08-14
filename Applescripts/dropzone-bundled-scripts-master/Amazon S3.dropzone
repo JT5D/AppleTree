@@ -1,0 +1,65 @@
+# Dropzone Destination Info
+# Name: Amazon S3
+# Description: Allows you to upload files to an Amazon S3 bucket.
+# Handles: NSFilenamesPboardType
+# Events: Dragged, TestConnection
+# Creator: Aptonic Software
+# URL: http://aptonic.com
+# IconURL: http://aptonic.com/destinations/icons/aws.png
+# OptionsNIB: AmazonS3Login
+
+require 's3'
+require 'uri'
+
+def dragged
+  $dz.determinate(false)
+  file_path = $items[0]
+
+  aws = Dropzone::AWS.new(ENV['USERNAME'], ENV['PASSWORD'], ENV['REMOTE_PATH'].downcase, true)
+  
+  begin
+    basename = File.basename(file_path)
+    $dz.begin("Uploading #{basename}...")
+    
+    aws.create_bucket unless aws.bucket_exists?
+    aws.upload(file_path)
+
+    filename = file_path.split(File::SEPARATOR)[-1].strip    
+    finish_text = "Upload Complete"
+    
+    if ENV['ROOT_URL'] != nil
+      slash = (ENV['ROOT_URL'][-1,1] == "/" ? "" : "/")
+      url = ENV['ROOT_URL'] + slash + URI.escape(filename, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+      finish_text = "URL is now on clipboard"
+    else
+      url = file_path
+    end
+
+    $dz.finish(finish_text)
+    $dz.text(url)
+  rescue Exception => e
+    $dz.finish(e)
+    $dz.url(false)
+  end
+end
+
+def testconnection
+    error_title = "Connection Failed"
+    aws = AWS.new(ENV['USERNAME'], ENV['PASSWORD'], ENV['REMOTE_PATH'].downcase, true)
+    
+    begin
+      timeout(20) {
+        aws.bucket_exists?
+      }
+    rescue Timeout::Error
+      $dz.error(error_title, "Connection timed out.")
+    rescue Exception => e
+      if e.to_s == "403 \"Forbidden\""
+        $dz.error(error_title, "Could not authenticate.\nCheck your Access Key ID and Secret are correct and you have permission to access the specified bucket.\n\nIf you enter a new bucket name it will be created on your first upload.")
+      else
+        $dz.error(error_title, e)
+      end
+    end
+    
+    $dz.alert("Connection Successful", "Amazon S3 connection succeeded.")
+end

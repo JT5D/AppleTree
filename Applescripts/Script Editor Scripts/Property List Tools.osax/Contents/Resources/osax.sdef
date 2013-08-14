@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="MacRoman"?>
+<dictionary name="Hello World">
+	<suite name="LNS Scripting Additions Suite" code="ScTl" description="Copyright © 1993-2004 Mark Alldritt &amp; Late Night Software Ltd.All Rights Reserved">
+		<command name="read property list" code="ScTlplsL" description="read a property list">
+			<result description="resulting record containing the data loaded from the property list">
+				<type type="reco"/>
+			</result>
+			<direct-parameter description="the property list file or string to load">
+				<type type="file"/>
+				<type type="text"/>
+			</direct-parameter>
+		</command>
+		<command name="store property list" code="ScTlplsS" description="save a property list">
+			<result type="text" description="Property List XML data (returned only if the in parameter is not specified)"/>
+			<direct-parameter description="the data to save as a property list">
+				<type type="reco"/>
+			</direct-parameter>
+			<parameter name="in" code="XMlO" description="where to store the property list (if not specified, Property List XML data is returned as a string)" optional="yes">
+				<type type="file"/>
+			</parameter>
+		</command>
+	</suite>
+</dictionary>
